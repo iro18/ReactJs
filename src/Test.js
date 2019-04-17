@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Form from './Form';
+import Challenger from './Challenger';
 
 class Test extends Component {
   render(){
     return (
-        <Form MaSuperVar="Mamamia" />
+    	<div>
+	        <Form MaSuperVar="Mamamia" />
+	        <Challenger  />
+        </div>
       )
   }
 }
