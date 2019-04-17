@@ -6,7 +6,7 @@ class SingleProject extends Component{
 		let CompoSingle ;
 		if(this.props.projects){
 			CompoSingle = this.props.projects.map(function(project){
-				return <li>{project.title} | {project.category}</li>
+				return <li key={project.id}>#{project.id} {project.title} | {project.category} - { project.complete ? ' ✅ ' : ' ❌ '}</li>
 			})
 		}
 		
