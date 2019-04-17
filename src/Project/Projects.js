@@ -13,6 +13,10 @@ class Projects extends Component{
 			{
 				title : "Titre 2",
 				category : "Mycat 2"
+			},
+			{
+				title : "Titre 3",
+				category : "Mycat 3"
 			}
 			]
 		}
@@ -20,7 +24,7 @@ class Projects extends Component{
 	render(){
 		return(
 			<div>
-			<h1> Salut </h1>
+			<h1> List of all task </h1>
 			<SingleProject projects={this.state.projects} />
 			</div>
 			)
