@@ -12,7 +12,7 @@ class TodoList extends Component{
 		onChange(event){
 			this.setState({
 				userInput: event.target.value
-			}, () => console.log(this.state.userInput))
+			})
 		}
 
 		addTodo(event){
@@ -21,7 +21,7 @@ class TodoList extends Component{
 			this.setState({
 				items: [...this.state.items, this.state.userInput],
 				userInput : ''
-			}, () => console.log(this.state.items))
+			})
 		}
 
 		delFromArray(item){
@@ -43,7 +43,7 @@ class TodoList extends Component{
 			return this.state.items.map((item) => {
 				return (
 					<div>
-							<input onClick={this.taskCompleted.bind(this , item)} type="checkbox" />  {item} | <button onClick= {this.delFromArray.bind(this,item)}>x</button>		
+							<p onClick={this.taskCompleted.bind(this , item)}>V</p>  {item} | <button onClick= {this.delFromArray.bind(this,item)}>x</button>		
 					</div>
 				);
 			});

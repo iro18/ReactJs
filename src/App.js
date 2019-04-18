@@ -10,6 +10,8 @@ class App extends Component {
     return (
       <div>
       <Projects />
+      <TodoList />
+      <Counter />
       </div>
     );
   }

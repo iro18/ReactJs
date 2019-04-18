@@ -28,10 +28,13 @@ class Projects extends Component{
 		}
 	}
 	render(){
+		
 		return(
 			<div>
 			<h1> List of all task </h1>
+			<ul>
 			<SingleProject projects={this.state.projects} />
+			</ul>
 			</div>
 			)
 	}
