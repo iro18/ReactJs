@@ -6,15 +6,17 @@ constructor(){
 	super()
 }
 render(){
-	
 	const incompleteTasks = this.props.projects.filter(task => task.complete === false);
 	const CompleteTasks = this.props.projects.filter(task => task.complete === true);
-	console.log(this.props);
+	
+
+	// console.log(this.props);
 	return (
 		<div>
+			
 			<h1> Incompleted Tasks </h1>
 			{incompleteTasks.map(projet => {
-				return <VerySingleProjet key={projet.id} projet={projet} />
+				return <VerySingleProjet key={projet.id} projet={projet} editTask = {this.props.editTask}  />
 			}
 			)}
 			<h1> Complete Tasks </h1>

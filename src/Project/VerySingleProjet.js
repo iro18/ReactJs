@@ -3,7 +3,10 @@ import React,{Component} from 'react'
 class VerySingleProjet extends Component{
     constructor(){
         super();
-        this.changeComplete = this.changeComplete.bind(this)
+      //   this.changeComplete = this.changeComplete.bind(this)
+    }
+    editTask(e){
+        this.props.editTask(this.props.id, this.refs.task.value)
     }
     changeComplete(projet){
         return <li>
@@ -14,7 +17,7 @@ class VerySingleProjet extends Component{
 
     render(){
         const projet = this.props.projet
-        return <li>#{projet.id}  -  {projet.title} / {projet.category} {projet.complete ? '✅' : <span onClick={this.changeComplete.bind(this, projet)}>❌</span>}</li>
+        return <li>#{projet.id}  -  {projet.title} / {projet.category} {projet.complete ? '✅' : <span onClick={this.props.editTask.bind(this, projet)}>❌</span>}</li>
     }
 }
 
