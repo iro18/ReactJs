@@ -18,7 +18,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+#root{
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+#root li{
+  list-style-type: none
+}
+input{
+  padding: 12px
+}
+form{
+  margin-top: 30px
+}
 .App-link {
   color: #61dafb;
 }
